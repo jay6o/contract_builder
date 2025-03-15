@@ -1,4 +1,4 @@
-import { PDFDocument, PDFImage, StandardFonts, rgb } from "pdf-lib";
+import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
 
 const wrapText = (text, font, maxWidth, fontSize) => {
   const words = text.split(" ");
@@ -97,7 +97,7 @@ formDataLines.forEach((line) => {
 });
 
   // Draw tasks
-  tasks.forEach((task, index) => {
+  tasks.forEach((task) => {
 	const bulletText = `\u2022  ${task}`;
     const taskLines = wrapText(
       bulletText,
