@@ -1,8 +1,8 @@
-import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
+import { PDFDocument, PDFFont, StandardFonts, rgb } from "pdf-lib";
 
-const wrapText = (text, font, maxWidth, fontSize) => {
+const wrapText = (text: string, font: PDFFont, maxWidth: number, fontSize: number) => {
   const words = text.split(" ");
-  const lines = [];
+  const lines: string[] = [];
   let currentLine = "";
 
   for (const word of words) {
@@ -21,7 +21,7 @@ const wrapText = (text, font, maxWidth, fontSize) => {
   return lines;
 };
 
-const handleFormSubmit = async (e, date, location, cost, client, tasks) => {
+const handleFormSubmit = async (e: React.FormEvent<HTMLButtonElement>, date: string, location: string, cost: string|number, client: string, tasks: string[]) => {
   e.preventDefault();
   const pdfDoc = await PDFDocument.create();
   const pageWidth = 600;
