@@ -53,7 +53,7 @@ export default function Home() {
 				<Button className="h-12" onClick={(e) => deleteTask(e, taskCount, setTaskCount, tasks, setTasks)}>Delete Task</Button>
 			)}
 			<br/>
-			<Button type="submit" onClick={(e) => handleFormSubmit(e, date, location, cost, client, tasks)} className="m-2 lg:mx-8 h-12 w-full text-xl font-bold">Create Contract</Button>
+			<Button type="submit" onClick={(e) => handleFormSubmit(e, date, location, cost, client, tasks)} className="m-2 lg:mx-8 h-12 w-[calc(100%-4rem)] text-xl font-bold">Create Contract</Button>
 		</form>
 	  </div>
   );
