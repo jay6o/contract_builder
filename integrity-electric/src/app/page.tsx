@@ -20,10 +20,10 @@ export default function Home() {
   const [tasks, setTasks] = useState<string[]>([""]);
 
   return (
-	  <div className="flex flex-col justify-center items-center min-h-screen w-screen">
+	  <div className="flex flex-col justify-center items-center min-h-screen w-screen bg-[#e4e4e7]">
 	  <h1 className="text-4xl font-bold m-2">New Contract</h1>
 	  <span className="text-2xl m-2">Integrity Electric</span>
-		<form className="lg:w-2/3 pt-4">
+		<form className="lg:w-1/3 pt-4">
 			<div className="row-1 flex justify-around">
 				<Input required type="text" placeholder="MM/DD/YYYY" className="m-2 lg:mx-8" value={date} onChange={(e) => setDate(e.target.value)}/>
 				<Input required type="text" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Job Location (1234 Some St., Arlington VA)" className="m-2 lg:mx-8" />
@@ -54,7 +54,7 @@ export default function Home() {
 				<Button className="h-12" onClick={(e) => deleteTask(e, taskCount, setTaskCount, tasks, setTasks)}>Delete Task</Button>
 			)}
 			<br/>
-			<Button type="submit" onClick={(e) => handleFormSubmit(e, date, location, cost, client, tasks)} className="m-2 lg:m-8 w-full h-12">Create Contract</Button>
+			<Button type="submit" onClick={(e) => handleFormSubmit(e, date, location, cost, client, tasks)} className="m-2 lg:mx-8 h-12 w-full text-xl font-bold">Create Contract</Button>
 		</form>
 	  </div>
   );
