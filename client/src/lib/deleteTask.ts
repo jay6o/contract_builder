@@ -1,7 +1,10 @@
-const deleteTask = (taskCount, setTaskCount, tasks, setTasks) => {
-	setTaskCount(--taskCount);
-	const newTasks = [...tasks];
-	newTasks.pop();
-	setTasks(newTasks);
+const deleteTask = (e, taskCount, setTaskCount, tasks, setTasks) => {
+	e.preventDefault();
+	if (taskCount > 1) {
+		setTaskCount(--taskCount);
+		const newTasks = [...tasks];
+		newTasks.pop();
+		setTasks(newTasks);
+	}
 }
 export default deleteTask;

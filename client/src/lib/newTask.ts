@@ -1,6 +1,8 @@
 const newTask = (taskCount, setTaskCount, tasks, setTasks): void => {
-	setTaskCount(++taskCount);
-	const newTasks = [...tasks, ""];
-	setTasks(newTasks);
+	if (tasks[tasks.length - 1] !== "") {
+		setTaskCount(++taskCount);
+		const newTasks = [...tasks, ""];
+		setTasks(newTasks);
+	}
 }
 export default newTask;

@@ -50,11 +50,10 @@ export default function Home() {
 
 			<Button className="new-task-button h-12 m-2 lg:m-8" onClick={() => newTask(taskCount, setTaskCount, tasks, setTasks)}>New Task</Button>
 			{taskCount > 1 && (
-				<Button className="h-12" onClick={() => deleteTask(taskCount, setTaskCount, tasks, setTasks)}>Delete Task</Button>
+				<Button className="h-12" onClick={(e) => deleteTask(e, taskCount, setTaskCount, tasks, setTasks)}>Delete Task</Button>
 			)}
 			<br/>
 			<Button type="submit" className="m-2 w-full h-12">Create Contract</Button>
-
 		</form>
 	  </div>
   );
